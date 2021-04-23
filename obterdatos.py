@@ -4,11 +4,10 @@ import csv
 from random import randrange
 from config import *
 
-
 def dato():
     lista = []
     with open(DATAFILE, "r", newline="\n") as ficheiro:
-        reader = csv.reader(ficheiro, delimiter=",")
+        reader = csv.reader(ficheiro, delimiter=";")
         lista = list(reader)
         try:
             datos_concello = lista[randrange(len(lista))]
@@ -18,12 +17,12 @@ def dato():
             return
 
     with open(DATAFILE, "w", newline="\n") as ficheiro:
-        writer = csv.writer(ficheiro, delimiter=",")
+        writer = csv.writer(ficheiro, delimiter=";")
         for linha in lista:
             writer.writerow(linha)
 
     with open(USEDFILE,"a", newline="\n") as ficheiro:
-        writer = csv.writer(ficheiro,delimiter=",")
+        writer = csv.writer(ficheiro,delimiter=";")
         writer.writerow(datos_concello)
 
     concello = datos_concello[1]
