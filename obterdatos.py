@@ -34,6 +34,8 @@ def dato():
         return f"No Concello de {concello} hai un total de {vacas} vacas e {habitantes} habitantes. Tantas vacas como habitantes"
     elif int(vacas) == 0:
         return f"No Concello de {concello} non hai ningunha vaca. Ten un total de {habitantes} habitantes."
+    elif int(vacas) == 1:
+        return f"No Concello de {concello} hai un total de {vacas} vaca e {habitantes} habitantes. {vacas_x_habitante} vacas por habitante."
     else:
         return f"No Concello de {concello} hai un total de {vacas} vacas e {habitantes} habitantes. {vacas_x_habitante} vacas por habitante."
 
