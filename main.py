@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import schedule
@@ -27,6 +28,7 @@ def main():
 
 if __name__ == '__main__':
 	logging.info("Programa iniciado")
+	logging.info(f"Os chíos publicaranse ás {hora}")
 	schedule.every().day.at(hora).do(main)
 	while True:
 		schedule.run_pending()
