@@ -4,10 +4,15 @@ from os import getenv
 
 #Configuración secrets para twitter
 twitter = {
-    'CONSUMER_KEY':'',
-    'CONSUMER_SECRET':'',
-    'ACCESS_KEY':'',
-    'ACCESS_SECRET':''
+    'T_CONSUMER_KEY':'',
+    'T_CONSUMER_SECRET':'',
+    'T_ACCESS_KEY':'',
+    'T_ACCESS_SECRET':''
+}
+
+mastodon = {
+    'M_ACCESS_TOKEN':'',
+    'M_API_BASE_URL':'https://botsin.space'
 }
 
 ficheiros = {
@@ -20,30 +25,57 @@ programacion = {
 }
 
 def carga():
-    global CONSUMER_KEY
+    # TWITTER
+    global TWITTER
     try:
-        CONSUMER_KEY = getenv("CONSUMER_KEY")
+        TWITTER = (getenv('TWITTER') == 'true')
     except:
         pass
 
-    global CONSUMER_SECRET
+    global T_CONSUMER_KEY
     try:
-        CONSUMER_SECRET = getenv("CONSUMER_SECRET")
+        T_CONSUMER_KEY = getenv("T_CONSUMER_KEY")
     except:
         pass
 
-    global ACCESS_KEY
+    global T_CONSUMER_SECRET
     try:
-        ACCESS_KEY = getenv("ACCESS_KEY")
+        T_CONSUMER_SECRET = getenv("T_CONSUMER_SECRET")
     except:
         pass
 
-    global ACCESS_SECRET
+    global T_ACCESS_KEY
     try:
-        ACCESS_SECRET = getenv("ACCESS_SECRET")
+        T_ACCESS_KEY = getenv("T_ACCESS_KEY")
     except:
         pass
 
+    global T_ACCESS_SECRET
+    try:
+        T_ACCESS_SECRET = getenv("T_ACCESS_SECRET")
+    except:
+        pass
+
+    # MASTODON 
+    global MASTODON
+    try:
+        MASTODON = (getenv('MASTODON') == 'true')
+    except:
+        pass
+
+    global M_ACCESS_TOKEN
+    try:
+        M_ACCESS_TOKEN = getenv("M_ACCESS_TOKEN")
+    except:
+        pass
+
+    global M_API_BASE_URL
+    try:
+        M_API_BASE_URL = getenv("M_API_BASE_URL")
+    except:
+        pass
+
+    # FICHEIROS
     global DATAFILE
     try:
         DATAFILE = getenv("DATAFILE")
@@ -56,6 +88,7 @@ def carga():
     except:
         pass
 
+    # PROGRAMACIÓN
     global hora
     try:
         hora = getenv("hora")
@@ -64,17 +97,23 @@ def carga():
 
 carga()
 
-if CONSUMER_KEY is None:
-    CONSUMER_KEY = twitter['CONSUMER_KEY']
+if T_CONSUMER_KEY is None:
+    T_CONSUMER_KEY = twitter['T_CONSUMER_KEY']
 
-if CONSUMER_SECRET is None:
-    CONSUMER_SECRET = twitter['CONSUMER_SECRET']
+if T_CONSUMER_SECRET is None:
+    T_CONSUMER_SECRET = twitter['T_CONSUMER_SECRET']
 
-if ACCESS_KEY is None:
-    ACCESS_KEY = twitter['ACCESS_KEY']
+if T_ACCESS_KEY is None:
+    T_ACCESS_KEY = twitter['T_ACCESS_KEY']
 
-if ACCESS_SECRET is None:
-    ACCESS_SECRET = twitter['ACCESS_SECRET']
+if T_ACCESS_SECRET is None:
+    T_ACCESS_SECRET = twitter['T_ACCESS_SECRET']
+
+if M_ACCESS_TOKEN is None:
+    M_ACCESS_TOKEN = mastodon['M_ACCESS_TOKEN']
+
+if M_API_BASE_URL is None:
+    M_API_BASE_URL = mastodon['M_API_BASE_URL']
 
 if DATAFILE is None:
     DATAFILE = ficheiros['DATAFILE']
