@@ -11,7 +11,7 @@ Bot para twitter e mastodon que publica o número de vacas que hai por habitante
 
 ### Contedor con opcións de exemplo
 ```bash
-    run -d --name cantasvacashai-contedor -e TWITTER=true -e T_CONSUMER_KEY='XXXXX' -e T_CONSUMER_SECRET='XXXXX' -e T_ACCESS_KEY='XXXXX' -e T_ACCESS_SECRET='XXXXX'  cantasvacashai-imaxe
+    docker run -d --name cantasvacashai-contedor -e TWITTER=true -e T_CONSUMER_KEY='XXXXX' -e T_CONSUMER_SECRET='XXXXX' -e T_ACCESS_KEY='XXXXX' -e T_ACCESS_SECRET='XXXXX'  cantasvacashai-imaxe
 ```
 
 ### Variábeis que acepta
