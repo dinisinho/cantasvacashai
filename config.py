@@ -12,7 +12,7 @@ twitter = {
 
 mastodon = {
     'M_ACCESS_TOKEN':'',
-    'M_API_BASE_URL':'https://botsin.space'
+    'M_API_BASE_URL':'https://bots.automatica.dev'
 }
 
 ficheiros = {

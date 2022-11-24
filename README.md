@@ -23,7 +23,7 @@ T_CONSUMER_SECRET : Consumer Secret de Twitter # Obrigatorio se temos twitter ha
 T_ACCESS_KEY : Access Key de Twitter # Obrigatorio se temos twitter habilitado
 T_ACCESS_SECRET : Access secret de Twitter # Obrigatorio se temos twitter habilitado
 M_ACCESS_TOKEN : Access token de Mastodon # Obrigatorio se temos mastodon habilitado
-M_API_BASE_URL : Url da instancia de Mastodon. # Por defecto https://botsin.space
+M_API_BASE_URL : Url da instancia de Mastodon. # Por defecto https://bots.automatica.dev
 DATAFILE : Ruta ao ficheiro que contén os datos. # Por defecto data/vacas_habi.csv
 USEDFILE : Ruta ao ficheiro onde se gardan os usados. # Por defecto data/usado.csv
 hora : Hora á que queremos que se fagan as publicacións. # Por defecto 22:00
