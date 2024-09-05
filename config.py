@@ -17,7 +17,8 @@ mastodon = {
 
 ficheiros = {
     'DATAFILE':'data/vacas_habi.csv',
-    'USEDFILE':'data/usado.csv'
+    'USEDFILE':'data/usado.csv',
+    'CONCELLOSFILE':'data/concellos.csv'
 }
 
 programacion = {
@@ -88,6 +89,12 @@ def carga():
     except:
         pass
 
+    global CONCELLOSFILE
+    try:
+        CONCELLOSFILE = getenv("CONCELLOSFILE")
+    except:
+        pass
+
     # PROGRAMACIÓN
     global hora
     try:
@@ -120,6 +127,9 @@ if DATAFILE is None:
 
 if USEDFILE is None:
     USEDFILE = ficheiros['USEDFILE']
+
+if CONCELLOSFILE is None:
+    CONCELLOSFILE = ficheiros['CONCELLOSFILE']
 
 if hora is None:
     hora = programacion['hora']
